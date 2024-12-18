@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Guitar Lessons</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+  integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" 
+  integrity="sha384-4LISF5TTJX/fLmGSxO53rV4miRxdg84mZsxmO8Rx5jGtp/LbrixFETvWa5a6sESd" crossorigin="anonymous">
+  <link href="./styles.css" rel="stylesheet" type="text/css">
+  <!-- <script src="./index.js" defer></script> -->
+</head>
+  
+  <body class="bg-dark">
+    <!-- NAV -->  
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3 p-4 fixed-top margin-bottom : 10px">
+      <div class="container-fluid">
+          <a href="#" class="navbar-brand">Guitar <span style="color: #dc3545;">Flow</span> </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navmenu">
+              <ul class="navbar-nav ms-auto px-3">
+                  <li class="nav-item">
+                      <a href="index.html" class="nav-link active">Home</a> <!-- active class here -->
+                  </li>
+                  <li class="nav-item">
+                      <a href="index.html#learn" class="nav-link">Lesson</a>
+                  </li>
+                  <li class="nav-item">
+                      <a href="chord.html" class="nav-link">Chord</a>
+                  </li>
+                  <li class="nav-item">
+                      <a href="pricing.html" class="nav-link">Exercise</a>
+                  </li>
+                  <li class="nav-item">
+                      <a href="virtualguitar.html" class="nav-link">Virtual Guitar</a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+  </nav>
+    <!-- Hero -->
+
+
+    <section class="text-bg-dark text-center text-sm-start p-5 pb-0" id="hero-section">
+      <div class="container" style="margin-top: 20px;">
+        <div class="d-sm-flex hero-text align-items-center justify-content-between gap-4">
+          <img class="img-fluid" src="./images/rockstar.png" alt="Rockstar" width="350" height="600">
+          <div class="container pb-4">
+            <h1 class="my-3">Guitar <span class="rockstar text-danger">Flow</span></h1>
+            <p class="lead my-3">
+              <b>Music was the language of the world</b>
+              <br>ดนตรีเป็นภาษาเดียวของโลก
+            </p>
+            
+            <!-- กล่องสีเหลี่ยมขอบกลม -->
+            <div class="d-flex justify-content-between mt-4">
+              <a href="virtualguitar.html" >
+              <button class="btn btn-danger text-white fw-bold" style="width: 250px; height: 60px; font-size: 20px;">
+                <span class="fw-bold text-light">VIRTUAL GUITAR</span>
+              </button>
+            </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    
+    <!-- Subscribe -->
+    <section class="bg-danger text-light text-center p-4">
+      <div class="container">
+        <div class="d-md-flex justify-content-between align-items-center mt-3">
+          
+            
+        </div>
+        
+      </div>
+    </section>
+    <!-- Caurousel -->
+    <section class="bg-dark p-5">
+      <div class="container" id="carousel">
+        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+          <div id="carouselExampleCaptions" class="carousel slide">
+            <!-- Indicators -->
+            <div class="carousel-indicators m-2">
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            
+            </div>
+            <!-- Item 1 -->
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="./images/hendrix.png" class="carousel-image center-block " alt="hendrix">
+                <div class="carousel-caption d-sm-flex justify-content-center align-items-center">
+                  <!-- Quote 1 -->
+                  <div class="card quote">
+                    <div class="card-body">
+                      <blockquote class="blockquote mb-0">
+                        <p>“คุณต้องบ้าต่อไป ความบ้าคลั่งก็เหมือนสวรรค์.”</p>
+                        <footer class="blockquote-footer">Jimi Hendrix (ราชาแห่งกีตาร์)</footer>
+                      </blockquote>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Item 2 -->
+              <div class="carousel-item">
+                <img src="./images/cobain.png" class="carousel-image center-block " alt="cobain">
+                <div class="carousel-caption d-sm-flex justify-content-center align-items-center">
+                  <!-- Quote 2 -->
+                  <div class="card quote">
+                    <div class="card-body">
+                      <blockquote class="blockquote mb-0">
+                        <p>“การอยากเป็นคนอื่นถือเป็นการเสียตัวตนที่คุณเป็น”</p>
+                        <footer class="blockquote-footer">Kurt Cobain (หนึ่งในผู้ก่อตั้งวง Nirvana)</footer>
+                      </blockquote>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <!-- Control buttons (indicators)-->
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+<!-- Cards -->
+<section class="text-bg-danger p-5" id="learn">
+  <div class="container">
+    <h2 class="text-center text-white pb-3">บทเรียนพื้นฐาน</h2>
+
+    <!-- Row for top 2 cards -->
+    <div class="row text-center g-1"> <!-- ลดระยะห่างระหว่างคอลัมน์ -->
+      
+      <!-- Acoustic card -->
+      <div class="col-md-6 learn-card d-flex justify-content-center">
+        <div class="card card-path text-center text-bg-light mt-3" style="width: 18rem;">
+          <div class="card-body">
+            <img src="./images/silhouette_acoustic.png" class="card-img-top pb-3" alt="Acoustic">
+            <h5 class="card-title">ส่วนประกอบกีตาร์</h5>
+            <p class="card-text">เรียนรู้ส่วนประกอบสำคัญๆในแต่ละส่วนของกีตาร์</p>
+            <a href="basic1.html" class="btn btn-danger">กดเพื่อเรียนรู้</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Electric card -->
+      <div class="col-md-6 learn-card d-flex justify-content-center">
+        <div class="card card-path text-center text-bg-light mt-3" style="width: 18rem;">
+          <div class="card-body">
+            <img src="./images/silhouette_electric.png" class="card-img-top pb-3" alt="Electric">
+            <h5 class="card-title">วิธีการจับ</h5>
+            <p class="card-text">ศึกษาการจับกีตาร์วิธีต่างๆเพื่อให้เข้าใจการจับทางท่าต่างๆ</p>
+            <a href="basic2.html" class="btn btn-danger">กดเพื่อเรียนรู้</a>
+          </div>
+        </div>
+      </div>
+    </div> <!-- End of first row -->
+
+    <!-- Row for bottom 2 cards -->
+    <div class="row text-center g-1 mt-4"> <!-- ลดระยะห่างระหว่างคอลัมน์ -->
+      <!-- Bass card -->
+      <div class="col-md-6 learn-card d-flex justify-content-center">
+        <div class="card card-path text-center text-bg-light mt-3" style="width: 18rem;">
+          <div class="card-body">
+            <img src="./images/silhouette_bass.png" class="card-img-top pb-3" alt="Bass">
+            <h5 class="card-title"><br>การจูนกีตาร์</h5>
+            <p class="card-text">ศึกษาการปรับจูนกีตาร์เพื่อให้เราได้เสียงที่ถูกต้อง</p>
+            <a href="basic3.html" class="btn btn-danger">กดเพื่อเรียนรู้</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Chord reading card -->
+      <div class="col-md-6 learn-card d-flex justify-content-center">
+        <div class="card card-path text-center text-bg-light mt-3" style="width: 18rem;">
+          <div class="card-body">
+            <img src="./images/silhouette_ankles.png" class="card-img-top pb-5" alt="Chord Reading">
+            <h5 class="card-title">การอ่านคอร์ด</h5>
+            <p class="card-text">ศึกษาการอ่านคอร์ดเพื่อให้สามารถเล่นเพลงได้อย่างถูกต้อง</p>
+            <a href="basic4.html" class="btn btn-danger">กดเพื่อเรียนรู้</a>
+          </div>
+        </div>
+      </div>
+    </div> <!-- End of second row -->
+
+  </section>
+
+  
+    
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center p-4">
+      <p>&copy; Guitar Flow</p>
+    </footer>
+          
+  
+
+    
+
+    <!-- JS -->
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <!-- Enroll submit modal-->
+    
+  </body>
+</html>

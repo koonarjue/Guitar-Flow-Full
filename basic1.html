@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Guitar Lessons</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" 
+    integrity="sha384-4LISF5TTJX/fLmGSxO53rV4miRxdg84mZsxmO8Rx5jGtp/LbrixFETvWa5a6sESd" crossorigin="anonymous">
+    <style>
+      body {
+        background-color: #1e1e2f; /* พื้นหลังเข้ม */
+        color: white; /* สีตัวอักษร */
+      }
+      .navbar {
+        background-color: #2c2c3a;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+      }
+      .video-section {
+        max-width: 900px;
+        margin: 80px auto;
+        padding: 20px;
+        background-color: #2c2c3a;
+        border-radius: 10px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+      }
+      .video-frame {
+        position: relative;
+        padding-bottom: 56.25%;
+        height: 0;
+        overflow: hidden;
+        border-radius: 10px;
+      }
+      .video-frame video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+        border-radius: 10px;
+      }
+      .video-title {
+        font-size: 1.5rem;
+        margin-top: 15px;
+        font-weight: bold;
+        text-align: center;
+        color: #f26d5b; /* สีข้อความโดดเด่น */
+      }
+      footer {
+        background-color: #2c2c3a;
+        margin-top: 30px;
+        padding: 15px 0;
+      }
+    </style>
+  </head>
+    
+
+    <body>
+      <!-- NAV -->
+      <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3 p-4 fixed-top">
+        <div class="container-fluid">
+          <a href="#" class="navbar-brand">Guitar <span style="color: #dc3545;">Flow</span> </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navmenu">
+            <ul class="navbar-nav ms-auto px-3">
+              <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+              <li class="nav-item"><a href="index.html#learn" class="nav-link active">Lesson</a></li>
+              <li class="nav-item"><a href="chord.html" class="nav-link">Chord</a></li>
+              <li class="nav-item"><a href="pricing.html" class="nav-link">Exercise</a></li>
+              <li class="nav-item"><a href="virtualguitar.html" class="nav-link">Virtual Guitar</a></li>
+            </ul>
+         
+          </div>
+        </div>
+      </nav>
+
+    
+
+   <!-- Video Section -->
+   <div class="video-section">
+    <div class="video-frame">
+      <iframe 
+        width="870" 
+        height="410" 
+        src="https://www.youtube.com/embed/ZwHgCMUyl4E" 
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+      </iframe>
+      <div class="video-title">บทที่ 1: ส่วนประกอบของกีตาร์</div>
+    </div>
+  </div>
+  
+  <!-- Footer -->
+ 
+    
+ 
+
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center p-4" style="margin-top: 230px;">
+      <p>&copy; Guitar Flow</p>
+    </footer>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz4fnFO9gyb61XkxGfsjH2MnttFz5jFW65xzZ2S1YsJQ5Y4USLgbv3j8F" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-pzjw8f+ua7Kw1TIq0F1xmbhCwvFzSAQfp00sU8J+MXC78Y6xZOlFfc5y5jo1m2rD" crossorigin="anonymous"></script>
+  </body>
+</html>

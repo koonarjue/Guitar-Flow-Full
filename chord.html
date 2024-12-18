@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Guitar Lessons</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .chord-info {
+            display: none;
+        }
+    </style>
+</head>
+    <body class="bg-dark">
+        <!-- NAV -->  
+        <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3 p-4 fixed-top margin-bottom : 10px">
+            <div class="container-fluid">
+              <a href="#" class="navbar-brand">Guitar <span style="color: #dc3545;">Flow</span> </a>
+              <!-- NAV toggler button-->  
+              <button class="navbar-toggler" 
+                type="button" 
+                data-bs-toggle="collapse" 
+                data-bs-target="#navmenu">
+              <span class="navbar-toggler-icon"></span>
+              </button>
+              <!-- NAV items-->  
+              <div class="collapse navbar-collapse" id="navmenu">
+                <ul class="navbar-nav ms-auto px-3">
+                  <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="index.html#learn" class="nav-link">Lesson</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="chord.html" class="nav-link active">Chord</a>
+                  </li>
+                  <li class="nav-item">
+                    <!-- <li class="nav-item"><a href="#instructors" class="nav-link">Tabs</a></li>-->
+                  </li>
+                  <li class="nav-item">
+                    <a href="pricing.html" class="nav-link">Exercise</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="virtualguitar.html" class="nav-link">Virtual Guitar</a>
+                  </li>
+                </ul>
+
+              </div>
+            </div>
+          </nav>
+
+    <!-- Basic Chord Section -->
+    <section class="container py-5" style="margin-top: 70px;">
+        <h2 class="text-light text-center mb-4 ">BASIC <span style="color: #dc3545;">CHORD</span>
+
+        </h2>
+        <div class="text-start mb-4">
+          <button id="toggleButton" class="btn btn-danger" onclick="toggleAllChords()">แสดงการวางมือทั้งหมด</button>    
+        </div>
+        <div class="row text-center">
+            <!-- Chord C -->
+            <div class="col-md-3 mb-4">
+                <div class="chord-item">
+                    <img src="images/profile12.jpg" alt="คอร์ด C" class="img-fluid">
+
+                    <div id="C" class="chord-info">
+                        <img src="images/CHO/C.jpg" alt="การวางมือคอร์ด C" class="img-fluid mt-3">
+                    </div>
+                </div>
+            </div>
+            <!-- Chord G -->
+            <div class="col-md-3 mb-4">
+                <div class="chord-item">
+                    <img src="images/profile2.jpg" alt="คอร์ด G" class="img-fluid">
+
+                    <div id="G" class="chord-info">
+                        <img src="images/CHO/G.jpg" alt="การวางมือคอร์ด G" class="img-fluid mt-3">
+                    </div>
+                </div>
+            </div>
+            <!-- Chord Am -->
+            <div class="col-md-3 mb-4">
+                <div class="chord-item">
+                    <img src="images/profile3.jpg" alt="คอร์ด Am" class="img-fluid">
+
+                    <div id="Am" class="chord-info">
+                        <img src="images/CHO/Am.jpg" alt="การวางมือคอร์ด Am" class="img-fluid mt-3">
+                    </div>
+                </div>
+            </div>
+            <!-- Chord Em -->
+            <div class="col-md-3 mb-4">
+                <div class="chord-item">
+                    <img src="images/profile4.jpg" alt="คอร์ด Em" class="img-fluid">
+
+                    <div id="Em" class="chord-info">
+                        <img src="images/CHO/Em.jpg" alt="การวางมือคอร์ด Em" class="img-fluid mt-3">
+                    </div>
+                </div>
+            </div>
+            <!-- Chord D -->
+            <div class="col-md-3 mb-4">
+                <div class="chord-item">
+                    <img src="images/profile5.jpg" alt="คอร์ด D" class="img-fluid">
+
+                    <div id="D" class="chord-info">
+                        <img src="images/CHO/D.jpg" alt="การวางมือคอร์ด D" class="img-fluid mt-3">
+                    </div>
+                </div>
+            </div>
+            <!-- Chord F -->
+            <div class="col-md-3 mb-4">
+                <div class="chord-item">
+                    <img src="images/profile6.jpg" alt="คอร์ด F" class="img-fluid">
+
+                    <div id="F" class="chord-info">
+                        <img src="images/CHO/F.jpg" alt="การวางมือคอร์ด F" class="img-fluid mt-3">
+                    </div>
+                </div>
+            </div>
+            <!-- Chord E -->
+            <div class="col-md-3 mb-4">
+                <div class="chord-item">
+                    <img src="images/profile7.jpg" alt="คอร์ด E" class="img-fluid">
+
+                    <div id="E" class="chord-info">
+                        <img src="images/CHO/E.jpg" alt="การวางมือคอร์ด E" class="img-fluid mt-3">
+                    </div>
+                </div>
+            </div>
+            <!-- Chord A -->
+            <div class="col-md-3 mb-4">
+                <div class="chord-item">
+                    <img src="images/profile8.jpg" alt="คอร์ด A" class="img-fluid">
+
+                    <div id="A" class="chord-info">
+                        <img src="images/CHO/A.jpg" alt="การวางมือคอร์ด A" class="img-fluid mt-3">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- JavaScript -->
+    <script>
+        function toggleChord(chord) {
+            const chordInfo = document.getElementById(chord);
+            chordInfo.style.display = (chordInfo.style.display === "block") ? "none" : "block";
+        }
+
+        function toggleAllChords() {
+            const allChords = document.querySelectorAll(".chord-info");
+            const toggleButton = document.getElementById("toggleButton");
+            const showAll = toggleButton.textContent === "แสดงการวางมือทั้งหมด";
+
+            allChords.forEach(chordInfo => {
+                chordInfo.style.display = showAll ? "block" : "none";
+            });
+
+            toggleButton.textContent = showAll ? "ซ่อนการวางมือทั้งหมด" : "แสดงการวางมือทั้งหมด";
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

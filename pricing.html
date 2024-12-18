@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guitar Lessons</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .question-container {
+            margin: 20px 0;
+            padding: 15px;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            background-color: #333;
+        }
+        .question {
+            font-size: 1.2rem;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+        .options .option {
+            padding: 10px;
+            margin: 5px 0;
+            background-color: #444;
+            border-radius: 5px;
+            cursor: pointer;
+            color: #fff;
+            transition: background-color 0.3s;
+        }
+        .options .option:hover {
+            background-color: #dc3545;
+        }
+        .options .option.selected {
+            background-color: #17a2b8;
+        }
+        .score {
+            font-size: 1.5rem;
+            margin-top: 20px;
+            color: white;
+        }
+        .submit-btn {
+            background-color: #dc3545;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+        }
+        .submit-btn:hover {
+            background-color: #c82333;
+        }
+        .result {
+            margin-top: 10px;
+            color: #ffc107;
+            font-weight: bold;
+        }
+    </style>
+</head>
+    <body class="bg-dark">
+        <!-- NAV -->  
+        <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3 p-4 fixed-top margin-bottom : 10px">
+            <div class="container-fluid">
+                <a href="#" class="navbar-brand">Guitar <span style="color: #dc3545;">Flow</span> </a>
+              <!-- NAV toggler button-->  
+              <button class="navbar-toggler" 
+                type="button" 
+                data-bs-toggle="collapse" 
+                data-bs-target="#navmenu">
+              <span class="navbar-toggler-icon"></span>
+              </button>
+              <!-- NAV items-->  
+              <div class="collapse navbar-collapse" id="navmenu">
+                <ul class="navbar-nav ms-auto px-3">
+                  <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="index.html#learn" class="nav-link">Lesson</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="chord.html" class="nav-link">Chord</a>
+                  </li>
+                  <li class="nav-item">
+                    <!-- <li class="nav-item"><a href="#instructors" class="nav-link">Tabs</a></li>-->
+                  </li>
+                  <li class="nav-item">
+                    <a href="pricing.html" class="nav-link active">Exercise</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="virtualguitar.html" class="nav-link">Virtual Guitar</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+    <div class="container mt-5 pt-5">
+        <h2 class="text-center text-light">Exercise</h2>
+        <p class="text-center text-light">ทดสอบความรู้เกี่ยวกับการเล่นกีตาร์
+            <br>มีบททดสอบทั้งหมด 10 ข้อ 
+            <br>สามารถตรวจสอบคะแนนได้ หลังจากทำครบทุกข้อ
+            <br>และ สามารถกลับมาใหม่ได้ ทุกครั้ง
+        </p>
+
+        <!-- Questions -->
+        <div id="questions-container">
+            <!-- ใช้ JavaScript สร้างคำถาม -->
+        </div>
+
+        <!-- Submit Button -->
+        <div class="text-center">
+            <button class="submit-btn" onclick="checkScore()">ตรวจสอบคะแนน</button>
+            <div id="final-score" class="score"></div>
+            <button class="submit-btn" id="restart-btn" onclick="restartQuiz()" style="display: none;">ทำข้อสอบใหม่</button>
+        </div>
+    </div>
+
+    <script>
+        const questions = [
+            { question: "กีตาร์มีจำนวนสายกี่เส้น?", options: ["4 เส้น", "5 เส้น", "6 เส้น", "7 เส้น"], correct: "6 เส้น" },
+            { question: "สายกีตาร์ที่หนาที่สุดคือสายอะไร", options: ["สาย 6", "สาย 5", "สาย 1", "สาย 2"], correct: "สาย 6" },
+            { question: "ส่วนใดของกีตาร์ที่ใช้ไว้หมุดสาย", options: ["คอ", "ไม้หน้า", "เฟรต", "บริดจ์"], correct: "บริดจ์" },
+            { question: "ตัวเหล็กที่อยู่ด้านหลังสายมีชื่อว่าอะไร", options: ["เฟรต", "นัท", "คอ", "ลูกบิด"], correct: "เฟรต" },
+            { question: "รูตรงกลางของลำตัวกีตาร์มีชื่อเรียกว่าอะไร", options: ["Sound barrier", "Sound hole", "Sound check", "Sound board"], correct: "Sound hole" },
+            { question: "ส่วนใดของกีตาร์ใช้ในการจูนเสียง", options: ["พิน", "ลูกบิด", "เฮดสต็อก", "นัท"], correct: "ลูกบิด" },
+            { question: "คอร์ด Am ต้องจับทั้งหมดกี่นิ้ว?", options: ["1 นิ้ว", "2 นิ้ว", "3 นิ้ว", "4 นิ้ว"], correct: "3 นิ้ว" },
+            { question: "ในภาพคอร์ดนี้ข้างบนมีตัววงกลมอยู่ หมายความอย่างไร", options: ["ส่วนที่ไม่เกี่ยวข้องกับคอร์ด", "ส่วนที่ต้องดีดให้มีเสียง", "ส่วนที่ไม่จำเป็นต้องดีด", "ไม่มีความหมายอะไร"], correct: "ส่วนที่ต้องดีดให้มีเสียง" ,image: "images/profile2.jpg"},
+            { question: "คอร์ด D มีรูปกากบาทติดอยู่ หมายความว่าคอร์ดนี้ต้องเล่นแบบใด", options: ["เล่นแบบปรกติ", "เล่นแค่ 3 สายล่าง", "เล่นแค่ 4 สายล่าง", "ไม่มีข้อใดถูก"], correct: "เล่นแค่ 4 สายล่าง" ,image: "images/profile5.jpg"},
+            { question: "ในภาพคอร์ดนี้ ตัวเลข 1 ให้ใช้นิ้วไหนกด", options: ["นิ้วโป้ง", "นิ้วชี้", "นิ้วกลาง", "นิ้วนาง"], correct: "นิ้วชี้", image: "images/profile7.jpg" },
+
+        ];
+
+        let userAnswers = {};
+
+ // ฟังก์ชันสร้างคำถาม
+        function loadQuestions() {
+            const container = document.getElementById("questions-container");
+            container.innerHTML = '';  // รีเซ็ตคำถามเก่า
+            questions.forEach((q, index) => {
+                container.innerHTML += `
+                    <div class="question-container">
+                        <div class="question">
+                            ${index + 1}. ${q.question}
+                            <br>
+                            ${q.image ? `<img src="${q.image}" alt="Question Image" class="img-fluid mt-2">` : ''}
+                        </div>
+                        <div class="options">
+                            ${q.options.map(option => `<div class="option" onclick="selectOption(${index}, this)">${option}</div>`).join('')}
+                        </div>
+                        <div id="result${index}" class="result"></div>
+                    </div>
+                `;
+            });
+        }
+
+
+        // บันทึกคำตอบที่ผู้ใช้เลือก
+        function selectOption(questionIndex, element) {
+            userAnswers[questionIndex] = element.innerText;
+            const options = element.parentElement.querySelectorAll('.option');
+            options.forEach(option => option.classList.remove('selected'));
+            element.classList.add('selected');
+        }
+
+        // ตรวจสอบคะแนนและแสดงผลลัพธ์
+        function checkScore() {
+            let score = 0;
+            questions.forEach((q, index) => {
+                const resultElement = document.getElementById(`result${index}`);
+                if (userAnswers[index] === q.correct) {
+                    score++;
+                    resultElement.textContent = "✅ ถูกต้อง!";
+                    resultElement.style.color = "#28a745";
+                } else {
+                    resultElement.textContent = `❌ ผิด! คำตอบที่ถูกต้องคือ ${q.correct}`;
+                    resultElement.style.color = "#dc3545";
+                }
+            });
+            document.getElementById("final-score").textContent = `คุณได้คะแนน ${score} / ${questions.length}`;
+            document.getElementById("restart-btn").style.display = 'inline-block'; // แสดงปุ่มทำข้อสอบใหม่
+        }
+
+        // รีเซ็ตคำตอบและโหลดคำถามใหม่
+        function restartQuiz() {
+            userAnswers = {};  // รีเซ็ตคำตอบ
+            document.getElementById("final-score").textContent = '';  // ลบคะแนนที่แสดง
+            document.getElementById("restart-btn").style.display = 'none';  // ซ่อนปุ่มทำข้อสอบใหม่
+            loadQuestions();  // โหลดคำถามใหม่
+        }
+
+        // โหลดคำถามเมื่อหน้าเว็บโหลด
+        window.onload = loadQuestions;
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,544 @@
+/* ------------------------------------------------ RULESET ------------------------------------------------ */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0; 
+}
+
+/* ------------------------------------------------- HTML ------------------------------------------------- */
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+}
+/* ------------------------------------------------- BODY ------------------------------------------------- */
+
+body {
+    min-width: 320px; 
+}
+@media (min-width: 576px) {
+    body {
+        min-width: 576px; 
+    }
+}
+body::before {
+    display: block;
+    content: '';
+    height: 60px;
+}
+
+/* ------------------------------------------------- NAV ------------------------------------------------- */
+.nav-link {
+    color: rgba(255,255,255,0.90);
+}
+
+.nav-link:hover, .navbar-brand:hover {
+    color: #dc3545;
+}
+
+
+.navbar-nav .nav-item .nav-link.active {
+    color: #ffcc00;  /* เปลี่ยนสีข้อความ */
+    font-weight: bold; /* ทำให้ตัวหนา */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* เอฟเฟ็กต์เรืองแสง */
+}
+
+/* เอาไว้ถ้าต้องการแปลงสีเมื่อ hover */
+.navbar-nav .nav-item .nav-link:hover {
+    color: #dc3545;
+}
+
+
+.container{
+    padding-top:1000px ;
+}
+
+/* ------------------------------------------------- HERO ------------------------------------------------- */
+
+#hero-section {
+    background-image: url(./images/cobain.png);
+    background-size: cover;    
+    background-position: center;
+    background-blend-mode:darken;
+}
+
+
+@media (max-width: 768px) {
+    .hero-text {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media(min-width: 768px) {
+    .subscribe-input {
+        width: 50%;
+    }
+}
+
+/* ------------------------------------------------- Carousel ------------------------------------------------- */
+
+.carousel-item {
+    height: 40rem;
+    color: white;
+    background-position: center;
+    background-size: cover;
+}
+
+.carousel-image {
+    max-height: 40rem;
+    background-color: #dc3545;
+    border-radius: 100px;
+   
+}
+@media(max-width: 768px) {
+    .carousel-image {
+        border-radius: 0;
+        width: 100%;
+        margin: auto;
+    }
+    
+    /* .quote {
+        min-width: 12rem;
+        max-width: 16rem;
+    } */
+}
+
+.quote {
+    border-radius: 20px;
+    border: black solid 1px;
+    max-width: 35rem;
+}
+
+/* ------------------------------------------------- Cards ------------------------------------------------- */
+
+.learn-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-img-top {
+    height: 20rem;
+    max-height: fit-content;
+    max-width: fit-content;
+}
+.card-path {
+    border-radius: 50px;
+    transition: all 0.3s;
+}
+
+.card-path:hover {
+    transform: translateY(-15px);
+}
+
+.instructors-card {
+    border-radius: 20px;
+}
+.instructors-card:hover {
+    color: #dc3545;
+}
+
+/* ------------------------------------------------ Pricing ------------------------------------------------ */
+
+.card-list {
+    list-style:none;
+}
+
+.card-list-item {
+    font-size: 1.125rem;
+}
+
+.pricing-card, .card-header  {
+    border-radius: 2rem !important;
+}
+
+.pricing-card p {
+    font-size: 1.125rem;
+}
+
+.card-header:hover {
+    color:#dc3545;
+}
+
+/* ------------------------------------------------ Contact ------------------------------------------------ */
+
+.google-map {
+    padding-bottom: 50%;
+    position: relative;
+}
+
+.google-map iframe {
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+}
+
+/* ------------------------------------------------ About ------------------------------------------------ */
+
+#about-hero {
+    min-height: 40vh;
+}
+
+#main-section {
+    height: 30rem;
+    background-image: url(./images/back3.jpg);
+    background-size: cover;
+    background-position: center;
+    opacity: 0.7;
+    
+}
+
+/* ------------------------------------------------ Footer ------------------------------------------------ */
+
+#pricing, #contact{
+    min-height: 100svh;
+}
+
+/* main h1 {
+    text-transform: uppercase;
+    font-size: 5rem;
+} */
+
+/* ------------------------------------------------- Result Styles ------------------------------------------------- */
+.result {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: fit-content;
+    min-width: 100px;
+    display: inline-block;
+}
+
+/* กรณีคำตอบถูกต้อง */
+.correct {
+    background-color: #d4edda; /* สีเขียวอ่อน */
+    border: 1px solid #28a745; /* กรอบเขียว */
+    color: #155724; /* ตัวอักษรเขียว */
+}
+
+/* กรณีคำตอบผิด */
+.wrong {
+    background-color: #f8d7da; /* สีแดงอ่อน */
+    border: 1px solid #dc3545; /* กรอบแดง */
+    color: #721c24; /* ตัวอักษรแดง */
+}
+
+
+/* ------------------------------------------------ End ------------------------------------------------ */
+
+
+:root{
+    --note_dot_opacity: 0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: #808D7C;
+}
+
+.fretboard{
+    display: flex;
+    flex-direction: column;
+    background-color: #caa472;
+    width: 100%;
+    height: 300px;
+    margin-top: 50px;
+}
+
+.string{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: relative;
+}
+.string:before{
+    content: '';
+    width: 100%;
+    height: 6px;
+    background: linear-gradient(#e9e4e4, #999);
+    box-shadow: 76px 3px 10px #806233;
+    z-index: 1;
+    position: absolute;
+    top: 22px;
+}
+
+.note-fret{
+    display: flex;
+    flex: 1;
+    border-right: 10px solid;
+    border-image: linear-gradient(to left, #494949, #d9aa5c, #494949) 1 100%;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.note-fret:first-child{
+    background-color: black;
+    min-width: 76px;
+    border-right: 30px solid;
+    flex-grow: 0;
+    flex-shrink: 0;
+    border-image: linear-gradient(to left, #bbb, #fff, #bbb) 1 100%;
+}
+
+.note-fret:before {
+    content: attr(data-note);
+    width: 33px;
+    height: 33px;
+    text-align: center;
+    border-radius: 50%;
+    line-height: 33px;
+    background-color: #C9DABF;
+    z-index: 2;
+    color: black;
+    opacity: var(--note_dot_opacity);
+    font-family: "Poppins", sans-serif;
+}
+
+.marked-note:before {
+    opacity: 1; 
+}
+
+.single-fretmark:after{
+    content: '';
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: #806233;
+    top: 140px;
+}
+
+.double-fretmark:before{
+    content: '';
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: #806233;
+    top: 55px;
+    transform: translate(-140%, 50%);
+}
+
+.double-fretmark:after{
+    content: '';
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: #806233;
+    top: 206px;
+    transform: translate(-140%, 50%);
+}
+
+.settings{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 100px;
+}
+
+.strum_button{
+    width: 175px;
+    height: 40px;
+    margin-top: 25px;
+    border-radius: 25px;
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    border: none;
+    background-color: #f15e53;
+}
+
+.strum_button:hover{
+    transform: scale(1.2);
+}
+
+.select_notes_button{
+    width: 175px;
+    height: 40px;
+    margin-top: 25px;
+    border-radius: 25px;
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    border: none;
+    background-color: #f15e53;
+}
+
+.select_notes_button:hover{
+    transform: scale(1.2);
+}
+
+.clear_notes_button{
+    width: 180px;
+    height: 40px;
+    margin-top: 25px;
+    border-radius: 25px;
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    border: none;
+    background-color: #f15e53;
+}
+
+.clear_notes_button:hover{
+    transform: scale(1.2);
+}
+
+.chord_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.chord_selection{
+    display: flex;
+    gap: 50px;
+}
+
+.chord_selection button{
+    width: 180px;
+    height: 40px;
+    margin-top: 25px;
+    border-radius: 25px;
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    border: none;
+    background-color: #f15e53;
+}
+
+.chord_selection button:hover{
+    transform: scale(1.1)
+}
+
+.chord_dropdowns{
+    display: flex;
+    display: none;
+    gap: 50px;
+}
+.chord_dropdown {
+    width: 60%; 
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    border: 1px solid #C9DABF;
+    background-color: #C9DABF;
+    margin: 10px 0;
+}
+
+@media (max-width: 1366px) {
+    .chord_selection button {
+        width: 100px; /* Reset to original width on large screens */
+    }
+}
+
+@media (max-width: 1200px) {
+    .chord_selection button {
+        width: 100px; /* Reset to original width on large screens */
+    }
+}
+
+@media (max-width: 1024px) {
+    .chord_selection {
+        display: none; /* Hide buttons on smaller screens */
+    }
+    .chord_dropdowns {
+        display: flex; /* Show dropdowns on smaller screens */
+        align-items: center;
+        gap: 10px;
+    }
+    .settings{
+        gap: 50px
+    }
+}
+button.active {
+    background-color: #1f07f7; /* สีของปุ่มเมื่อถูกกด */
+    color: white; /* ตัวอักษรสีขาว */
+    border: 2px solid #fff;
+}
+
+button.active {
+    background-color: #1f07f7; /* สีของปุ่มเมื่อถูกกด */
+    color: white; /* ตัวอักษรสีขาว */
+    border: 2px solid #fff;
+}
+
+button {
+    background-color: #f15e53; /* สีเริ่มต้นของปุ่ม */
+    color: white; /* ตัวอักษรสีขาว */
+    border: 2px solid #fff;
+    transition: background-color 0.1s ease; /* เพิ่ม transition ให้เกิดการเปลี่ยนสี */
+}
+
+
+
+
+.question-container {
+    margin: 20px 0;
+    padding: 15px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    background-color: #333;
+}
+.question {
+    font-size: 1.2rem;
+    color: #fff;
+    margin-bottom: 10px;
+}
+.options .option {
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #444;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+    transition: background-color 0.3s;
+}
+.options .option:hover {
+    background-color: #dc3545;
+}
+.options .option.selected {
+    background-color: #17a2b8;
+}
+.score {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    color: white;
+}
+.submit-btn {
+    background-color: #dc3545;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+.submit-btn:hover {
+    background-color: #c82333;
+}
+.result {
+    margin-top: 10px;
+    color: #ffc107;
+    font-weight: bold;
+}
